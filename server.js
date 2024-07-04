@@ -1,6 +1,8 @@
 import express from 'express';
 import { connect, Schema, model } from 'mongoose';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Express uygulaması oluşturun
 const app = express();
@@ -9,7 +11,7 @@ const app = express();
 app.use(cors());
 
 // MongoDB'ye bağlanın
-connect('mongodb+srv://melisa:MeLiSa*0729@qrscanner.moqawfs.mongodb.net/?retryWrites=true&w=majority&appName=qrscanner')
+connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('MongoDB\'ye başarıyla bağlanıldı');
 
