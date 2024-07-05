@@ -29,7 +29,7 @@ domReady(function () {
     // Taranan kodla ürün bilgilerini çekmek için API'ye istek gönder
     async function fetchProductInfo(decodedText) {
         try {
-            let response = await fetch(`https://your-vercel-url.vercel.app/api/products/${decodedText}`);
+            let response = await fetch(`https://okuyucu-b214.vercel.app/api/products/${decodedText}`);
             if (response.ok) {
                 let product = await response.json();
                 // Ürün bilgilerini güncelle

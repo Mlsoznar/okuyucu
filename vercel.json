@@ -5,7 +5,8 @@
       { "src": "client/*/", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "server.js" },
-      { "src": "/(.*)", "dest": "/client/index.html" }
+      { "src": "/(.*)", "dest": "/client/index.html" },
+      { "src": "/api/(.*)", "dest": "server.js" }
+      
     ]
   }
